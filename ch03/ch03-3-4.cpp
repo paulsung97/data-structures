@@ -60,3 +60,4 @@ polynomial addPoly(polynomial A, polynomial B){
 		}
 		printf("\n");
 	}
+	// ³¡
