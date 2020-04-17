@@ -26,5 +26,6 @@ void smTranspose(term a[], term b[]) {
 		b[p].row = a[j].col;
 		b[p].value = a[j].value;
 		p++;
-	}
+
+				}
 }
