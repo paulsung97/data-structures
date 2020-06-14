@@ -37,20 +37,19 @@ treeNode* RL_rotate(treeNode* parent) {
 	return RR_rotate(parent);
 }
 
-//서브 트리의 높이를 구하는 연산
+
 int getHeight(treeNode* p) {
 	int height = 0;
 	if (p != NULL)height = MAX(getHeight(p->left), getHeight(p->right)) + 1;
 	return height;
 }
 
-//서브 트리의 높이를 이용해 균형 인수 BF를 구하는 연산
+
 int getBF(treeNode* p) {
 	if (p == NULL) return 0;
 	return getHeight(p->left) - getHeight(p->right);
 }
 
-//BF를 검사하여 불균형이 발생할 경우, 회전 연산 호출
 treeNode* rebalance(treeNode** p) {
 	int BF = getBF(*p);
 
@@ -67,7 +66,7 @@ treeNode* rebalance(treeNode** p) {
 	return *p;
 }
 
-//AVL 트리에 노드를 삽입하는 연산 : 이진 탐색 연산처럼 삽입한 후에, rebalance() 호출
+
 treeNode* insert_AVL_Node(treeNode** root, element x) {
 	if (*root == NULL) {
 		*root = (treeNode*)malloc(sizeof(treeNode));
@@ -90,7 +89,7 @@ treeNode* insert_AVL_Node(treeNode** root, element x) {
 	return *root;
 }
 
-//이진 탐색 트리에 노드를 삽입하는 연산
+
 treeNode* insert_BST_Node(treeNode* p, element x) {
 	treeNode* newNode;
 	if (p == NULL) {
@@ -126,7 +125,7 @@ treeNode* searchTree(treeNode* root, element x) {
 	return p;
 }
 
-//이진 탐색 트리를 중위 순회하면서 출력하는 연산
+
 void displayInorder(treeNode* root) {
 	if (root) {
 		displayInorder(root->left);
