@@ -106,7 +106,7 @@ treeNode* insert_BST_Node(treeNode* p, element x) {
 	return p;
 
 }
-//이진 탐색 트리와 AVL 트리에서 키값 x를 탐색하는 연산
+
 treeNode* searchTree(treeNode* root, element x) {
 	treeNode* p;
 	int count = 0;
